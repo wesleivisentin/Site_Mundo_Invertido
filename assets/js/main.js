@@ -11,6 +11,7 @@ btnSubscribe.addEventListener("click", () => {
         level: txtLevel.value,
         character: txtCharacter.value 
     }
-    console.log(subscription);
+    //salvar banco de dados
+    
 })
 
