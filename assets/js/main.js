@@ -28,3 +28,10 @@ btnSubscribe.addEventListener("click", () => {
 
 })
 
+
+// async function loadData() {
+//     const subscriptions = await getHellfireClubSubscriptions()
+//     console.log(subscriptions);
+// }
+
+// loadData()

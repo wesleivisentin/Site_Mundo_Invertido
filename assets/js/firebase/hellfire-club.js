@@ -1,6 +1,6 @@
 
 import app from "./app.js"
-import {getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js'
+import {getFirestore, collection, addDoc, getDocs } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js'
 
 export async function subscribeToHellfireClun(subscription) {
     const db = getFirestore(app)
@@ -9,12 +9,13 @@ export async function subscribeToHellfireClun(subscription) {
     return docRef.id
 }
 
-export async function getHellfireClubSubscriptions() {
-    const db = getFirestore(app)
-    const hellfireClubCollection = collection(db, "hellfire-clube")
-    const subscriptions = hellfireClubCollection.docs.map(doc => doc.data());
-    return subscriptions;
-  }
+// export async function getHellfireClubSubscriptions() {
+//     const db = getFirestore(app)
+//     const hellfireClubCollections= collection(db, "hellfire-clube")
+//     const hellfireClubCollectionSnapshot = await getDocs(hellfireClubCollections);
+//     const subscriptions = hellfireClubCollectionSnapshot.docs.map(doc => doc.data());
+//     return subscriptions;
+//   }
 
 
 // CODIGO TIRADO DA DOCUMENTAÇÃO PARA EDITAR O DE CIMA:
