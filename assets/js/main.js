@@ -1,6 +1,6 @@
-import app from "./firebase/app.js"
+
 import { subscribeToHellfireClun } from "./firebase/hellfire-club.js";
-console.log(app);
+
 
 
 const txtName = document.getElementById("txtName")
@@ -17,7 +17,14 @@ btnSubscribe.addEventListener("click", () => {
         character: txtCharacter.value 
     }
     //salvar banco de dados
-    subscribeToHellfireClun()
+   subscribeToHellfireClun(subscription) 
+
+  alert("Salvo com Sucesso!")
+
+    txtName.value = ""
+    txtEmail.value = ""
+    txtLevel.value = ""
+     txtCharacter.value = ""
 
 })
 
